@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>サログの使い方 | Apple Watch サウナ記録アプリ</title>
+<meta name="description" content="Apple Watchでサウナ・水風呂・外気浴を記録するアプリ「サログ」の使い方。基本操作、心拍グラフ、ととのい度、サウナマップの使い方と、温度に関する注意点をまとめています。">
+<style>
+:root{
+  --brand:#2178eb;
+  --brand-deep:#1752bf;
+  --totonoi:#ff9426;
+  --ink:#111418;
+  --muted:#5c6470;
+  --line:#e4e8ee;
+  --bg:#ffffff;
+  --card:#f6f8fb;
+}
+@media (prefers-color-scheme: dark){
+  :root{ --ink:#f2f4f7; --muted:#a3acb9; --line:#2b313a; --bg:#14171c; --card:#1c2027; }
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Noto Sans JP",sans-serif;
+  line-height:1.8; font-size:16px;
+}
+.wrap{max-width:720px; margin:0 auto; padding:0 20px 80px}
+header{
+  background:linear-gradient(135deg,var(--brand),var(--brand-deep));
+  color:#fff; padding:48px 20px 40px; text-align:center;
+}
+header h1{margin:0 0 8px; font-size:28px; letter-spacing:.02em}
+header p{margin:0; opacity:.9; font-size:15px}
+.badge{
+  display:inline-block; margin-top:20px; padding:10px 22px;
+  background:#fff; color:var(--brand); border-radius:999px;
+  font-weight:700; text-decoration:none; font-size:15px;
+}
+h2{
+  font-size:20px; margin:48px 0 12px; padding-bottom:8px;
+  border-bottom:2px solid var(--line);
+}
+h3{font-size:16px; margin:28px 0 6px}
+p{margin:0 0 14px}
+ol,ul{margin:0 0 16px; padding-left:1.4em}
+li{margin-bottom:6px}
+.muted{color:var(--muted); font-size:14px}
+.card{background:var(--card); border-radius:14px; padding:18px 20px; margin:16px 0}
+.warn{border-left:4px solid var(--totonoi)}
+.tip{border-left:4px solid var(--brand)}
+.card h3{margin-top:0}
+table{width:100%; border-collapse:collapse; margin:12px 0; font-size:15px}
+th,td{text-align:left; padding:8px 10px; border-bottom:1px solid var(--line)}
+th{color:var(--muted); font-weight:600; font-size:14px}
+figure{margin:20px 0; text-align:center}
+figure img{
+  width:100%; max-width:280px; height:auto; border-radius:20px;
+  border:1px solid var(--line);
+}
+figcaption{font-size:13px; color:var(--muted); margin-top:8px}
+.shots{display:flex; flex-wrap:wrap; gap:20px; justify-content:center}
+.shots figure{flex:1 1 240px; margin:0}
+.key{
+  display:inline-block; padding:2px 8px; background:var(--brand);
+  color:#fff; border-radius:6px; font-size:13px; font-weight:700;
+}
+footer{
+  border-top:1px solid var(--line); margin-top:60px; padding-top:24px;
+  font-size:14px; color:var(--muted); text-align:center;
+}
+footer a{color:var(--brand)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>サログの使い方</h1>
+  <p>Apple Watch でサウナを記録するアプリ</p>
+  <a class="badge" href="https://apps.apple.com/jp/app/id6760950311">App Store で見る</a>
+</header>
+
+<div class="wrap">
+
+<h2>1. はじめかた</h2>
+<ol>
+  <li>iPhone に「サログ」をインストールします</li>
+  <li>Apple Watch にも自動でインストールされます（数分かかることがあります）</li>
+  <li>Apple Watch でサログを開き、<strong>セッション開始</strong>をタップ</li>
+</ol>
+<p class="muted">初回は心拍データへのアクセス許可を求められます。許可すると心拍が自動で記録されます。</p>
+
+<h2>2. サウナ中の操作</h2>
+<p>すべて Apple Watch だけで完結します。iPhone を持ち込む必要はありません。</p>
+<ul>
+  <li><strong>水風呂へ / 外気浴へ</strong> … 画面のボタンをタップすると次のフェーズに切り替わります</li>
+  <li><strong>一時停止</strong> … 席を外すときなどに使います</li>
+  <li><strong>切り替えの取り消し</strong> … 押し間違えたら10秒以内なら戻せます</li>
+</ul>
+
+<div class="card tip">
+  <h3>終了は「長押し」です</h3>
+  <p>セッションの終了ボタンは、<strong>タップではなく長押し</strong>で反応します。</p>
+  <p class="muted" style="margin:0">サウナでは手や画面が濡れていて誤タップが起きやすいため、記録を守る目的で長押しにしています。タップしても反応しないのは不具合ではありません。</p>
+</div>
+
+<h2>3. iPhone で振り返る</h2>
+<p>セッションを終了すると、記録は自動で iPhone に同期されます。</p>
+
+<div class="shots">
+  <figure>
+    <img src="img/01_home.png" alt="ホーム画面">
+    <figcaption>ホーム … 最新の記録と月間・年間のサマリー</figcaption>
+  </figure>
+  <figure>
+    <img src="img/04_detail_chart.png" alt="心拍グラフ">
+    <figcaption>詳細 … 心拍グラフとフェーズのタイムライン</figcaption>
+  </figure>
+</div>
+
+<p>履歴タブから記録をタップすると、心拍の推移がグラフで見られます。サウナ・水風呂・外気浴が色分けされているので、そのときの体の反応が一目で分かります。</p>
+
+<h2>4. 施設を登録する</h2>
+<p>記録の詳細画面から、行ったサウナ施設を登録できます。</p>
+<ol>
+  <li>履歴から記録を開く</li>
+  <li>「サ活ログ」の欄で施設を検索して選ぶ</li>
+  <li>サウナ室・水風呂の温度もここで記録できます</li>
+</ol>
+
+<div class="shots">
+  <figure>
+    <img src="img/05_map.png" alt="サウナマップ">
+    <figcaption>マップ … 訪問した施設が全国地図にピンで残ります</figcaption>
+  </figure>
+  <figure>
+    <img src="img/06_calendar.png" alt="カレンダー">
+    <figcaption>カレンダー … ととのい度が色の濃さで一覧できます</figcaption>
+  </figure>
+</div>
+
+<p class="muted">施設を登録するとマップにピンが立ちます。登録していない記録はマップに表示されません。</p>
+
+<h2>5. ととのい度について</h2>
+<p>サログには2種類の「ととのい度」があります。</p>
+
+<table>
+  <tr><th>種類</th><th>内容</th></tr>
+  <tr><td>ととのい度</td><td>自分の感覚で付ける5段階の評価</td></tr>
+  <tr><td>ととのい度（自動判定）</td><td>外気浴中に心拍がどれだけ・どれだけ速く下がったかから算出した 0〜100 のスコア</td></tr>
+</table>
+
+<figure>
+  <img src="img/03_detail_score.png" alt="ととのい度の自動判定">
+  <figcaption>心拍の下がり方からスコアを算出します</figcaption>
+</figure>
+
+<p class="muted">自動判定は心拍データがある記録にのみ表示されます。外気浴を記録していない場合は「未計測」になります。健康状態を判定するものではありません。</p>
+
+<h2>6. 記録をシェアする</h2>
+<p>記録の詳細画面の<strong>右上にある共有ボタン</strong>から、1枚の画像を作成できます。SNS への投稿にそのまま使えます。</p>
+<p>マップ画面の右上からは、訪問した都道府県数・施設数をまとめた「サウナ制覇マップ」の画像を作成できます。</p>
+
+<h2>7. 温度についての注意</h2>
+
+<div class="card warn">
+  <h3>⚠️ サウナ室は動作保証温度を超えます</h3>
+  <p>サウナ室（80〜100°C）は、Apple Watch の動作保証温度を超えます。</p>
+  <table>
+    <tr><th>モデル</th><th>動作保証温度</th></tr>
+    <tr><td>Apple Watch Ultra</td><td>手首に装着時 -20〜55°C</td></tr>
+    <tr><td>その他のモデル</td><td>0〜35°C（装着時の拡張記載なし）</td></tr>
+  </table>
+  <p>本体に熱がこもると watchOS が温度警告を表示し、アプリの動作が停止したり記録が中断されることがあります。<strong>これは Apple Watch 側の保護機能によるもので、アプリの不具合ではありません。</strong></p>
+  <p style="margin:0"><strong>記録が中断された場合でも、そこまでの内容は保存されます。</strong>（サログ 1.4.1 以降）</p>
+</div>
+
+<div class="card tip">
+  <h3>💡 使うなら Apple Watch Ultra をおすすめします</h3>
+  <p>Ultra は装着時の動作保証温度が -20〜55°C と、他のモデル（0〜35°C）より高温に強い仕様です。開発者も Ultra を使っています。</p>
+  <p style="margin:0">ただし、サウナ室の温度はこの範囲も超えます。熱がこもるとエラーが出やすくなるため、開発者は濡れタオルを巻いて使っています。<strong>これは Apple が推奨する使い方ではありません。</strong>ご自身の判断でお願いします。</p>
+</div>
+
+<h2>よくある質問</h2>
+
+<h3>Q. 終了ボタンを押しても反応しません</h3>
+<p>終了は<strong>長押し</strong>です。濡れた手による誤操作を防ぐためで、不具合ではありません。</p>
+
+<h3>Q. サウナ中にエラーが出て記録が止まりました</h3>
+<p>Apple Watch 本体に熱がこもると、保護機能により動作が制限されます。そこまでの記録は保存されているので、iPhone の履歴で確認してください。</p>
+
+<h3>Q. 心拍が記録されていません</h3>
+<p>ヘルスケアデータへのアクセスが許可されているか確認してください。iPhone の「ヘルスケア」アプリ →「共有」→「App」→「サログ」から設定できます。</p>
+
+<h3>Q. マップに記録が表示されません</h3>
+<p>マップには<strong>施設を登録した記録だけ</strong>が表示されます。記録の詳細画面から施設を登録してください。</p>
+
+<h3>Q. iPhone に記録が同期されません</h3>
+<p>iPhone と Apple Watch が近くにあり、両方でアプリが起動できる状態か確認してください。Apple Watch の開始画面に「未同期」と出ている場合は、そこをタップすると再送できます。</p>
+
+<h3>Q. 機種変更したら記録は引き継がれますか</h3>
+<p>現在のバージョンでは、記録は端末内に保存されています。iCloud を使った同期は今後のアップデートで対応予定です。</p>
+
+<footer>
+  <p>サログ - サウナ記録<br>
+  <a href="https://apps.apple.com/jp/app/id6760950311">App Store</a> ・
+  <a href="https://takuyan003.github.io/salog-privacy/">プライバシーポリシー</a></p>
+  <p>お問い合わせは X <a href="https://x.com/takuyan_n_n">@takuyan_n_n</a> のDMへ</p>
+</footer>
+
+</div>
+</body>
+</html>
